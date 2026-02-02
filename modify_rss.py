@@ -2,6 +2,8 @@ import feedparser
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from collections import defaultdict
+import urllib.request
+import re
 import config
 
 def parse_date(date_string):
@@ -29,33 +31,49 @@ def clean_episode_title(title):
         return title[len(prefix):]
     return title
 
-def get_episode_duration(entry):
-    """Extrae la duración del episodio de múltiples fuentes posibles"""
+def get_durations_from_xml(feed_url):
+    """Descarga el XML y extrae las duraciones con sus GUIDs"""
+    print(f"Descargando XML original para extraer duraciones...")
     
-    # Intento 1: itunes_duration (forma más común)
-    if hasattr(entry, 'itunes_duration'):
-        return str(entry.itunes_duration)
-    
-    # Intento 2: buscar en tags con namespace itunes
-    if hasattr(entry, 'tags'):
-        for tag in entry.tags:
-            if 'duration' in tag.get('term', '').lower():
-                return tag.get('label', '')
-    
-    # Intento 3: buscar directamente en el diccionario del entry
-    if 'itunes_duration' in entry:
-        return str(entry['itunes_duration'])
-    
-    # Intento 4: Mirar en los links por si está ahí
-    if hasattr(entry, 'duration'):
-        return str(entry.duration)
-    
-    return None
+    try:
+        with urllib.request.urlopen(feed_url) as response:
+            xml_content = response.read().decode('utf-8')
+        
+        # Parsear el XML
+        root = ET.fromstring(xml_content)
+        
+        # Buscar todos los items
+        durations_map = {}
+        
+        # Namespaces
+        namespaces = {
+            'itunes': 'http://www.itunes.com/dtds/podcast-1.0.dtd'
+        }
+        
+        # Buscar items en el channel
+        for item in root.findall('.//item'):
+            # Obtener GUID
+            guid_elem = item.find('guid')
+            if guid_elem is not None:
+                guid = guid_elem.text
+                
+                # Buscar duración iTunes
+                duration_elem = item.find('itunes:duration', namespaces)
+                if duration_elem is not None and duration_elem.text:
+                    durations_map[guid] = duration_elem.text
+                    print(f"  Duración encontrada: {duration_elem.text} para GUID: {guid[:30]}...")
+        
+        print(f"\nTotal duraciones extraídas: {len(durations_map)}")
+        return durations_map
+        
+    except Exception as e:
+        print(f"Error extrayendo duraciones del XML: {e}")
+        return {}
 
-def modify_duplicate_dates(feed_url):
+def modify_duplicate_dates(feed_url, durations_map):
     """Descarga RSS y modifica fechas duplicadas"""
     
-    print(f"Descargando feed desde: {feed_url}")
+    print(f"\nDescargando feed con feedparser...")
     feed = feedparser.parse(feed_url)
     
     if not feed.entries:
@@ -75,6 +93,12 @@ def modify_duplicate_dates(feed_url):
         
         date_obj = date_obj.replace(tzinfo=None)
         date_key = date_obj.date()
+        
+        # Añadir duración desde el mapa
+        guid = entry.get('id', entry.get('link', ''))
+        if guid in durations_map:
+            entry['duration_from_xml'] = durations_map[guid]
+        
         date_groups[date_key].append({
             'entry': entry,
             'original_date': date_obj
@@ -104,7 +128,7 @@ def modify_duplicate_dates(feed_url):
 def create_rss_xml(original_feed, modified_entries):
     """Crea archivo XML RSS con las fechas modificadas"""
     
-    # Crear RSS root - SIN duplicar namespaces
+    # Crear RSS root
     rss = ET.Element('rss')
     rss.set('version', '2.0')
     rss.set('xmlns:itunes', 'http://www.itunes.com/dtds/podcast-1.0.dtd')
@@ -120,10 +144,9 @@ def create_rss_xml(original_feed, modified_entries):
     # Copiar metadatos del feed original
     original_channel = original_feed.feed
     
-    # Idioma (formato correcto es 'es' no 'es-es')
+    # Idioma
     if hasattr(original_channel, 'language'):
         lang = original_channel.language
-        # Normalizar a formato de 2 letras si es necesario
         if lang.startswith('es'):
             lang = 'es'
         ET.SubElement(channel, 'language').text = lang
@@ -155,13 +178,11 @@ def create_rss_xml(original_feed, modified_entries):
     
     # Si encontramos imagen, añadirla
     if podcast_image_url:
-        # Imagen RSS estándar
         image_elem = ET.SubElement(channel, 'image')
         ET.SubElement(image_elem, 'url').text = podcast_image_url
         ET.SubElement(image_elem, 'title').text = config.FEED_TITLE
         ET.SubElement(image_elem, 'link').text = config.FEED_LINK
         
-        # Imagen iTunes
         itunes_image = ET.SubElement(channel, '{http://www.itunes.com/dtds/podcast-1.0.dtd}image')
         itunes_image.set('href', podcast_image_url)
     
@@ -188,7 +209,7 @@ def create_rss_xml(original_feed, modified_entries):
         description = entry.get('summary', entry.get('description', ''))
         ET.SubElement(item, 'description').text = description
         
-        # Fecha modificada (RFC-2822 format)
+        # Fecha modificada
         ET.SubElement(item, 'pubDate').text = format_date(modified_date)
         
         # GUID
@@ -223,14 +244,11 @@ def create_rss_xml(original_feed, modified_entries):
                     enclosure.set('length', str(link.get('length', '0')))
                     break
         
-        # Duración iTunes (MEJORADO)
-        duration = get_episode_duration(entry)
+        # Duración iTunes (desde XML original)
+        duration = entry.get('duration_from_xml')
         if duration:
             itunes_duration = ET.SubElement(item, '{http://www.itunes.com/dtds/podcast-1.0.dtd}duration')
             itunes_duration.text = duration
-            print(f"  Duración añadida: {duration}")
-        else:
-            print(f"  ⚠ Sin duración para: {clean_title}")
         
         # Imagen del episodio
         if hasattr(entry, 'image') and isinstance(entry.image, dict) and 'href' in entry.image:
@@ -242,8 +260,11 @@ def create_rss_xml(original_feed, modified_entries):
 def main():
     print("=== Iniciando modificación de RSS ===")
     
+    # Primero extraer duraciones del XML original
+    durations_map = get_durations_from_xml(config.ORIGINAL_FEED_URL)
+    
     # Modificar fechas
-    original_feed, modified_entries = modify_duplicate_dates(config.ORIGINAL_FEED_URL)
+    original_feed, modified_entries = modify_duplicate_dates(config.ORIGINAL_FEED_URL, durations_map)
     
     if not modified_entries:
         print("ERROR: No se pudieron procesar episodios")
@@ -263,13 +284,13 @@ def main():
     print(f"✓ URL del feed: {config.FEED_LINK}")
     
     # Mostrar algunos ejemplos
-    print("\n--- Primeros 5 episodios (con títulos limpios) ---")
+    print("\n--- Primeros 5 episodios ---")
     for i, ep in enumerate(modified_entries[:5]):
         original_title = ep['entry'].get('title', 'Sin título')
         clean_title = clean_episode_title(original_title)
-        duration = get_episode_duration(ep['entry'])
+        duration = ep['entry'].get('duration_from_xml', 'N/A')
         print(f"{i+1}. {clean_title}")
-        print(f"   Fecha: {ep['modified_date'].strftime('%Y-%m-%d')} | Duración: {duration if duration else 'N/A'}")
+        print(f"   Fecha: {ep['modified_date'].strftime('%Y-%m-%d')} | Duración: {duration}")
 
 if __name__ == "__main__":
     main()
