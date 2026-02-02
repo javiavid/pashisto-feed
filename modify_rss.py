@@ -31,43 +31,54 @@ def clean_episode_title(title):
         return title[len(prefix):]
     return title
 
+def extract_durations_simple(xml_content):
+    """Extrae duraciones usando regex - método más robusto"""
+    durations_map = {}
+    
+    # Dividir en items
+    items = re.findall(r'<item>.*?</item>', xml_content, re.DOTALL)
+    
+    print(f"Items encontrados en XML: {len(items)}")
+    
+    for item in items:
+        # Extraer GUID
+        guid_match = re.search(r'<guid[^>]*>([^<]+)</guid>', item)
+        # Extraer duración
+        duration_match = re.search(r'<itunes:duration>([^<]+)</itunes:duration>', item)
+        
+        if guid_match and duration_match:
+            guid = guid_match.group(1)
+            duration = duration_match.group(1)
+            durations_map[guid] = duration
+            print(f"  ✓ {duration} -> {guid[:40]}...")
+    
+    print(f"\nTotal duraciones extraídas: {len(durations_map)}")
+    return durations_map
+
 def get_durations_from_xml(feed_url):
-    """Descarga el XML y extrae las duraciones con sus GUIDs"""
-    print(f"Descargando XML original para extraer duraciones...")
+    """Descarga el XML y extrae las duraciones"""
+    print(f"Descargando XML original desde: {feed_url}")
     
     try:
-        with urllib.request.urlopen(feed_url) as response:
+        request = urllib.request.Request(
+            feed_url,
+            headers={'User-Agent': 'Mozilla/5.0'}
+        )
+        
+        with urllib.request.urlopen(request, timeout=30) as response:
             xml_content = response.read().decode('utf-8')
         
-        # Parsear el XML
-        root = ET.fromstring(xml_content)
+        print(f"XML descargado: {len(xml_content)} caracteres")
         
-        # Buscar todos los items
-        durations_map = {}
+        # Usar método simple con regex
+        durations_map = extract_durations_simple(xml_content)
         
-        # Namespaces
-        namespaces = {
-            'itunes': 'http://www.itunes.com/dtds/podcast-1.0.dtd'
-        }
-        
-        # Buscar items en el channel
-        for item in root.findall('.//item'):
-            # Obtener GUID
-            guid_elem = item.find('guid')
-            if guid_elem is not None:
-                guid = guid_elem.text
-                
-                # Buscar duración iTunes
-                duration_elem = item.find('itunes:duration', namespaces)
-                if duration_elem is not None and duration_elem.text:
-                    durations_map[guid] = duration_elem.text
-                    print(f"  Duración encontrada: {duration_elem.text} para GUID: {guid[:30]}...")
-        
-        print(f"\nTotal duraciones extraídas: {len(durations_map)}")
         return durations_map
         
     except Exception as e:
-        print(f"Error extrayendo duraciones del XML: {e}")
+        print(f"ERROR extrayendo duraciones: {e}")
+        import traceback
+        traceback.print_exc()
         return {}
 
 def modify_duplicate_dates(feed_url, durations_map):
@@ -79,6 +90,8 @@ def modify_duplicate_dates(feed_url, durations_map):
     if not feed.entries:
         print("ERROR: No se encontraron episodios en el feed")
         return feed, []
+    
+    print(f"Episodios encontrados: {len(feed.entries)}")
     
     # Agrupar episodios por fecha
     date_groups = defaultdict(list)
@@ -98,6 +111,9 @@ def modify_duplicate_dates(feed_url, durations_map):
         guid = entry.get('id', entry.get('link', ''))
         if guid in durations_map:
             entry['duration_from_xml'] = durations_map[guid]
+            print(f"  Duración asignada a: {entry.get('title', 'Sin título')[:50]}")
+        else:
+            print(f"  ⚠ Sin duración para: {entry.get('title', 'Sin título')[:50]}")
         
         date_groups[date_key].append({
             'entry': entry,
@@ -109,7 +125,7 @@ def modify_duplicate_dates(feed_url, durations_map):
     
     for date_key, episodes in sorted(date_groups.items(), reverse=True):
         if len(episodes) > 1:
-            print(f"Encontrados {len(episodes)} episodios en {date_key}")
+            print(f"\nEncontrados {len(episodes)} episodios en {date_key}")
             episodes.sort(key=lambda x: x['original_date'])
             
             for idx, episode_data in enumerate(episodes):
@@ -194,6 +210,8 @@ def create_rss_xml(original_feed, modified_entries):
         itunes_explicit.text = 'no'
     
     # Añadir episodios
+    episodes_with_duration = 0
+    
     for episode_data in modified_entries:
         entry = episode_data['entry']
         modified_date = episode_data['modified_date']
@@ -249,16 +267,19 @@ def create_rss_xml(original_feed, modified_entries):
         if duration:
             itunes_duration = ET.SubElement(item, '{http://www.itunes.com/dtds/podcast-1.0.dtd}duration')
             itunes_duration.text = duration
+            episodes_with_duration += 1
         
         # Imagen del episodio
         if hasattr(entry, 'image') and isinstance(entry.image, dict) and 'href' in entry.image:
             itunes_ep_image = ET.SubElement(item, '{http://www.itunes.com/dtds/podcast-1.0.dtd}image')
             itunes_ep_image.set('href', entry.image.href)
     
+    print(f"\n✓ Episodios con duración en feed final: {episodes_with_duration}/{len(modified_entries)}")
+    
     return rss
 
 def main():
-    print("=== Iniciando modificación de RSS ===")
+    print("=== Iniciando modificación de RSS ===\n")
     
     # Primero extraer duraciones del XML original
     durations_map = get_durations_from_xml(config.ORIGINAL_FEED_URL)
@@ -282,15 +303,6 @@ def main():
     
     print("\n✓ Archivo feed.xml generado correctamente")
     print(f"✓ URL del feed: {config.FEED_LINK}")
-    
-    # Mostrar algunos ejemplos
-    print("\n--- Primeros 5 episodios ---")
-    for i, ep in enumerate(modified_entries[:5]):
-        original_title = ep['entry'].get('title', 'Sin título')
-        clean_title = clean_episode_title(original_title)
-        duration = ep['entry'].get('duration_from_xml', 'N/A')
-        print(f"{i+1}. {clean_title}")
-        print(f"   Fecha: {ep['modified_date'].strftime('%Y-%m-%d')} | Duración: {duration}")
 
 if __name__ == "__main__":
     main()
