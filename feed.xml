@@ -1,15 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:ns0="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Pasajes de la Historia (Fechas Corregidas)</title>
     <description>Feed modificado con fechas únicas por episodio</description>
     <link>https://javiavid.github.io/pashisto-feed/feed.xml</link>
     <language>es-es</language>
+    <copyright>Copyright © Atresmedia Corporación de Medios de Comunicación, S.A - www.antena3.com</copyright>
+    <itunes:author>OndaCero</itunes:author>
     <image>
       <url>https://image.ondacero.es/clipping/cmsimages01/2022/10/21/DF7E2559-6B0F-493A-A452-AEC40156D303/pasajes-historia-podcast_default.jpg</url>
       <title>Pasajes de la Historia (Fechas Corregidas)</title>
       <link>https://javiavid.github.io/pashisto-feed/feed.xml</link>
     </image>
+    <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/21/DF7E2559-6B0F-493A-A452-AEC40156D303/pasajes-historia-podcast_default.jpg" />
+    <itunes:explicit>no</itunes:explicit>
     <item>
       <title>Pasajes de la Historia: Tutankamón</title>
       <description>Este pasaje narra el descubrimiento de la tumba intacta de Tutankamón en 1922 por el arqueólogo británico Howard Carter, lo que desató una leyenda sobre la "maldición de la momia" debido a las muertes de algunas personas relacionadas con el hallazgo. Cebrián explora la vida y el misterioso final de Tutankamón, un faraón de la 18.ª dinastía que ascendió al trono a los 9 años tras la muerte de su padre Akenatón. Y comenta las teorías sobre su posible asesinato por parte del sumo sacerdote Ay y el general Horemheb, así como la hipótesis más reciente de que murió por una infección en una fractura de pierna. También nos relata la fascinación que sigue generando Tutankamón y su tumba, convirtiéndolo en uno de los íconos más atractivos del antiguo Egipto.</description>
@@ -17,8 +21,8 @@
       <guid isPermaLink="false">692872f29553b0e452feeaab</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-tutankamon_20251201692872f29553b0e452feeaab.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/11/27/6FD9DE84-4326-4D53-B433-DCFA247FA604/6FD9DE84-4326-4D53-B433-DCFA247FA604.mp3" type="audio/mpeg" length="25045773" />
-      <ns0:duration>00:25:42</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:25:42</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Esparta y el Paso de las Termópilas (I)</title>
@@ -27,8 +31,8 @@
       <guid isPermaLink="false">692875278e7250000771f775</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-esparta-paso-termopilas_20251201692875278e7250000771f775.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/11/27/8B80E3FE-6AA8-4B63-BF09-F7660C1FD7DB/8B80E3FE-6AA8-4B63-BF09-F7660C1FD7DB.mp3" type="audio/mpeg" length="28505262" />
-      <ns0:duration>00:28:01</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:28:01</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Esparta y el Paso de las Termópilas (II)</title>
@@ -37,8 +41,8 @@
       <guid isPermaLink="false">692876568706b0e4abc45b82</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-esparta-paso-termopilas_20251201692876568706b0e4abc45b82.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/11/27/5DC4B679-BCC1-447E-94D1-17A447572FD0/5DC4B679-BCC1-447E-94D1-17A447572FD0.mp3" type="audio/mpeg" length="28200115" />
-      <ns0:duration>00:28:50</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:28:50</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Sócrates</title>
@@ -47,8 +51,8 @@
       <guid isPermaLink="false">69287750de063c000774dc42</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-socrates_2025120169287750de063c000774dc42.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/11/27/4E0A90A5-0982-4DD9-A1EB-178E5150B835/4E0A90A5-0982-4DD9-A1EB-178E5150B835.mp3" type="audio/mpeg" length="23036882" />
-      <ns0:duration>00:23:25</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:23:25</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Alejandro III de Macedonia, Alejandro Magno</title>
@@ -57,8 +61,8 @@
       <guid isPermaLink="false">6928781ff2d33700070a4307</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-alejandro-iii-macedonia-alejandro-magno_202512016928781ff2d33700070a4307.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/11/27/32DEAE95-AF0A-4458-8356-970EAD9CF085/32DEAE95-AF0A-4458-8356-970EAD9CF085.mp3" type="audio/mpeg" length="35092565" />
-      <ns0:duration>00:34:10</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:34:10</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Viriato contra Roma</title>
@@ -67,8 +71,8 @@
       <guid isPermaLink="false">692879b0de063c000774dc4a</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-viriato-roma_20251201692879b0de063c000774dc4a.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/11/27/74597E1F-9BCD-405C-A99E-21117D5C7795/74597E1F-9BCD-405C-A99E-21117D5C7795.mp3" type="audio/mpeg" length="26844362" />
-      <ns0:duration>00:27:28</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:27:28</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Cleopatra</title>
@@ -77,8 +81,8 @@
       <guid isPermaLink="false">69287c24de063c000774dc55</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-cleopatra_2025120169287c24de063c000774dc55.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/11/27/47A502DE-67E5-4141-A27C-5CE973B7690D/47A502DE-67E5-4141-A27C-5CE973B7690D.mp3" type="audio/mpeg" length="33643837" />
-      <ns0:duration>00:34:23</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:34:23</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Espartaco y su lucha por la Libertad</title>
@@ -87,8 +91,8 @@
       <guid isPermaLink="false">692d4799bf80b800078532a7</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-espartaco-lucha-libertad_20251201692d4799bf80b800078532a7.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/12/01/A811650E-987E-4AA4-BF06-F1670BDA7703/A811650E-987E-4AA4-BF06-F1670BDA7703.mp3" type="audio/mpeg" length="23595332" />
-      <ns0:duration>00:23:20</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:23:20</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: La Batalla de Roncesvalles</title>
@@ -97,8 +101,8 @@
       <guid isPermaLink="false">692d4971dad7b0e41a86ae75</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-batalla-roncesvalles_20251201692d4971dad7b0e41a86ae75.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/12/01/CB61053E-2693-46C4-B038-3607CDFD58B3/CB61053E-2693-46C4-B038-3607CDFD58B3.mp3" type="audio/mpeg" length="14532836" />
-      <ns0:duration>00:15:07</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:15:07</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Historia de los Vikingos</title>
@@ -107,8 +111,8 @@
       <guid isPermaLink="false">692d4b4ddad7b0e42286ae75</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-historia-vikingos_20251201692d4b4ddad7b0e42286ae75.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/12/01/6F9BB22C-B940-4FF8-AAF1-C9AF73DB0619/6F9BB22C-B940-4FF8-AAF1-C9AF73DB0619.mp3" type="audio/mpeg" length="27674309" />
-      <ns0:duration>00:27:54</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:27:54</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Las cruzadas y la Guerra Santa</title>
@@ -117,8 +121,8 @@
       <guid isPermaLink="false">692d4ca0bf80b800078532b5</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-cruzadas-guerra-santa_20251201692d4ca0bf80b800078532b5.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/12/01/3828CEA9-4FDD-40C3-B23A-EBB981F7A6AE/3828CEA9-4FDD-40C3-B23A-EBB981F7A6AE.mp3" type="audio/mpeg" length="28867096" />
-      <ns0:duration>00:29:38</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:29:38</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Guerra de las Comunidades (Los Comuneros)</title>
@@ -127,8 +131,8 @@
       <guid isPermaLink="false">692d50f8fa354800079272bc</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-guerra-comunidades-comuneros_20251201692d50f8fa354800079272bc.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/12/01/620625E5-C3F6-43F1-88A7-E61B8AB47B89/620625E5-C3F6-43F1-88A7-E61B8AB47B89.mp3" type="audio/mpeg" length="20625614" />
-      <ns0:duration>00:21:27</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:21:27</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Vasco Núñez de Balboa</title>
@@ -137,8 +141,8 @@
       <guid isPermaLink="false">692d594fdad7b0e46086ae75</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-vasco-nunez-balboa_20251201692d594fdad7b0e46086ae75.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/12/01/52702401-C942-4CE3-9D04-813835F50C83/52702401-C942-4CE3-9D04-813835F50C83.mp3" type="audio/mpeg" length="19510382" />
-      <ns0:duration>00:20:12</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:20:12</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Leonardo da Vinci contra Miguel Ángel Buonarroti</title>
@@ -147,8 +151,8 @@
       <guid isPermaLink="false">692d5b5ad9372a00072494a0</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-leonardo-vinci-miguel-angel-buonarroti_20251201692d5b5ad9372a00072494a0.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/12/01/4E121914-5644-43F5-A7F4-85ABC6B58E31/4E121914-5644-43F5-A7F4-85ABC6B58E31.mp3" type="audio/mpeg" length="7848410" />
-      <ns0:duration>00:07:54</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:07:54</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Marie Curie</title>
@@ -157,8 +161,8 @@
       <guid isPermaLink="false">692d7a18f22ab0e42a3987ef</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-marie-curie_20251201692d7a18f22ab0e42a3987ef.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2025/12/01/7050A5C6-CC94-4116-A645-85E374373662/7050A5C6-CC94-4116-A645-85E374373662.mp3" type="audio/mpeg" length="30241086" />
-      <ns0:duration>00:31:17</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:31:17</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Aníbal y las Guerras Púnicas</title>
@@ -167,8 +171,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-anibal-guerras-punicas_202210126346a15feae7b0e434c9a7ea.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-anibal-guerras-punicas_202210126346a15feae7b0e434c9a7ea.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/12/6A54B6EE-4264-47EE-940F-99E7B9D2DA59/6A54B6EE-4264-47EE-940F-99E7B9D2DA59.mp3" type="audio/mpeg" length="40763272" />
-      <ns0:duration>00:39:13</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/18/832BF483-6437-43A8-83EB-9C65A2FE3D93/anibal-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:39:13</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/18/832BF483-6437-43A8-83EB-9C65A2FE3D93/anibal-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Arthur Conan Doyle</title>
@@ -177,8 +181,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-arthur-conan-doyle_202210126346a6a9eae7b0e436c9a7ea.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-arthur-conan-doyle_202210126346a6a9eae7b0e436c9a7ea.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/12/FCC16233-607E-4D94-9586-9A296122F229/FCC16233-607E-4D94-9586-9A296122F229.mp3" type="audio/mpeg" length="25462634" />
-      <ns0:duration>00:24:45</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/FC9C9B54-5F9C-40E3-8BAB-F6DA901E7C8F/conan-doyle-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:24:45</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/FC9C9B54-5F9C-40E3-8BAB-F6DA901E7C8F/conan-doyle-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Atila, Rey de los Hunos</title>
@@ -187,8 +191,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-atila-rey-hunos_202210116345103eeae7b0e4e8c7a7ea.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-atila-rey-hunos_202210116345103eeae7b0e4e8c7a7ea.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/11/71DC9427-347C-405D-B550-6F63066453F7/71DC9427-347C-405D-B550-6F63066453F7.mp3" type="audio/mpeg" length="34092671" />
-      <ns0:duration>00:33:02</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/18/7BC55F00-E647-4AA2-81E6-E4B996B6BF16/atila-rey-hunos-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:33:02</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/18/7BC55F00-E647-4AA2-81E6-E4B996B6BF16/atila-rey-hunos-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Leónidas, Rey de Esparta, contra Jerjes I</title>
@@ -197,8 +201,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-leonidas-rey-esparta-jerjes_202210126346a93e0a5fb0e433ebd492.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-leonidas-rey-esparta-jerjes_202210126346a93e0a5fb0e433ebd492.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/12/5D2D1FDB-4AF4-4AD5-B406-E1F54D98A75F/5D2D1FDB-4AF4-4AD5-B406-E1F54D98A75F.mp3" type="audio/mpeg" length="17602377" />
-      <ns0:duration>00:17:18</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/8697514B-7AEC-478F-9EAE-98C4EDC08511/jerjes-leonidas-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:17:18</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/8697514B-7AEC-478F-9EAE-98C4EDC08511/jerjes-leonidas-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Roger de Flor</title>
@@ -207,8 +211,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-roger-flor_2022101163451275a496b0e4c74bc659.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-roger-flor_2022101163451275a496b0e4c74bc659.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/11/5489D7D2-85E4-4A22-8986-4E399CD6DA54/5489D7D2-85E4-4A22-8986-4E399CD6DA54.mp3" type="audio/mpeg" length="19935020" />
-      <ns0:duration>00:19:27</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/C7A1C832-9BAA-45F2-949A-F16E3A822D07/roger-flor-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:19:27</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/C7A1C832-9BAA-45F2-949A-F16E3A822D07/roger-flor-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Miguel Hernández</title>
@@ -217,8 +221,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-miguel-hernandez_2022101163451410e73cb0e44332b241.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-miguel-hernandez_2022101163451410e73cb0e44332b241.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/11/D0597F3B-0EA7-4D82-85D9-6E39DC77434F/D0597F3B-0EA7-4D82-85D9-6E39DC77434F.mp3" type="audio/mpeg" length="41991852" />
-      <ns0:duration>00:41:07</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/8088EB0C-E5BB-46D2-AC46-48BECE2D1E4C/miguel-hernandez-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:41:07</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/8088EB0C-E5BB-46D2-AC46-48BECE2D1E4C/miguel-hernandez-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Roald Amundsen y la conquista de los Polos</title>
@@ -227,8 +231,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-roald-amundsen-conquista-polos_2022101163451481e73cb0e44432b241.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-roald-amundsen-conquista-polos_2022101163451481e73cb0e44432b241.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/11/CBB1BC60-1227-48E0-A33A-EFF8BC21AB12/CBB1BC60-1227-48E0-A33A-EFF8BC21AB12.mp3" type="audio/mpeg" length="24441757" />
-      <ns0:duration>00:24:05</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/9EF92CEC-7B3E-4874-9ADC-22DA092DF8E5/explorador-amundsen-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:24:05</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/9EF92CEC-7B3E-4874-9ADC-22DA092DF8E5/explorador-amundsen-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Emilia Pardo Bazán</title>
@@ -237,8 +241,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-emilia-pardo-bazan_20221011634516bf5811b0e4dfc57514.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-emilia-pardo-bazan_20221011634516bf5811b0e4dfc57514.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/11/75D2D850-DC3F-4088-AEB1-7BE1F599C350/75D2D850-DC3F-4088-AEB1-7BE1F599C350.mp3" type="audio/mpeg" length="25500663" />
-      <ns0:duration>00:24:36</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/8BA1680C-17AB-43A5-8FD9-2277B220E09C/emilia-pardo-bazan-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:24:36</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/8BA1680C-17AB-43A5-8FD9-2277B220E09C/emilia-pardo-bazan-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Caterina Sforza</title>
@@ -247,8 +251,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-caterina-sforza_20221011634518abe73cb0e44a32b241.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-caterina-sforza_20221011634518abe73cb0e44a32b241.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/11/B405E268-88C3-4BFF-9886-8DCA9AD3B463/B405E268-88C3-4BFF-9886-8DCA9AD3B463.mp3" type="audio/mpeg" length="21794896" />
-      <ns0:duration>00:21:22</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/EA12708C-0F7E-4B64-94C5-BE122430B979/caterina-sforza-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:21:22</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/EA12708C-0F7E-4B64-94C5-BE122430B979/caterina-sforza-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Simo Häyhä y la Guerra Ruso-Finesa</title>
@@ -257,8 +261,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-simo-hayha-guerra-rusofinesa_20221006633edbd8eb5fb0e4951d4a6a.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-simo-hayha-guerra-rusofinesa_20221006633edbd8eb5fb0e4951d4a6a.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/06/844794AE-ADB1-46CB-8944-ED7DAE029BF7/844794AE-ADB1-46CB-8944-ED7DAE029BF7.mp3" type="audio/mpeg" length="21401582" />
-      <ns0:duration>00:21:00</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/5C251E28-0232-4442-8EA0-2C15683601BD/guerra-ruso-finesa-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:21:00</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/5C251E28-0232-4442-8EA0-2C15683601BD/guerra-ruso-finesa-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Erwin Rommel, el Zorro del Desierto</title>
@@ -267,8 +271,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-erwin-rommel-zorro-desierto_2022101163451a5fdcb9b0e487a247ff.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-erwin-rommel-zorro-desierto_2022101163451a5fdcb9b0e487a247ff.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/11/8F687337-9CCE-498C-BFD7-69CDC981C58D/8F687337-9CCE-498C-BFD7-69CDC981C58D.mp3" type="audio/mpeg" length="28528183" />
-      <ns0:duration>00:27:21</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/6640AC04-BF7F-42A6-8F4D-BB2413BA9BAB/rommel-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:27:21</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/6640AC04-BF7F-42A6-8F4D-BB2413BA9BAB/rommel-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Batalla de Austerlitz</title>
@@ -277,8 +281,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-batalla-austerlitz_20221006633edf41fea0b0e48c8a7ae2.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-batalla-austerlitz_20221006633edf41fea0b0e48c8a7ae2.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/06/B3CBAA04-0F0C-4425-9F27-4A727A71808C/B3CBAA04-0F0C-4425-9F27-4A727A71808C.mp3" type="audio/mpeg" length="31100561" />
-      <ns0:duration>00:30:05</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/324CBBD2-AA13-4804-92F8-83FD6E4B775C/batalla-austertlitz-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:30:05</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/324CBBD2-AA13-4804-92F8-83FD6E4B775C/batalla-austertlitz-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Oscar Wilde</title>
@@ -287,8 +291,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-oscar-wilde_20221005633d468bd1ddb0e4c755f21c.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-oscar-wilde_20221005633d468bd1ddb0e4c755f21c.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/05/A6E53C38-157A-434C-9883-C5D6CA059726/A6E53C38-157A-434C-9883-C5D6CA059726.mp3" type="audio/mpeg" length="34822379" />
-      <ns0:duration>00:33:22</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/FA49AD7A-ACB7-4A5B-B1CC-A882CED5A1DA/oscar-wilde-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:33:22</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/FA49AD7A-ACB7-4A5B-B1CC-A882CED5A1DA/oscar-wilde-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Benito Peréz Galdós</title>
@@ -297,8 +301,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-benito-perez-galdos_2022101163451ad95176b0e4472802ca.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-benito-perez-galdos_2022101163451ad95176b0e4472802ca.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/11/743E2993-A1CF-485C-9DC6-C23497DB707C/743E2993-A1CF-485C-9DC6-C23497DB707C.mp3" type="audio/mpeg" length="25870668" />
-      <ns0:duration>00:25:27</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/28599FD4-FE9B-477E-9CE9-D7FAF48D33AE/galdos-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:25:27</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/28599FD4-FE9B-477E-9CE9-D7FAF48D33AE/galdos-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Batalla Las Navas de Tolosa</title>
@@ -307,8 +311,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-batalla-navas-tolosa_20221006633ee5c46e87b0e49de1c586.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-batalla-navas-tolosa_20221006633ee5c46e87b0e49de1c586.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/06/516057FB-475D-417B-B6FF-31696C310C98/516057FB-475D-417B-B6FF-31696C310C98.mp3" type="audio/mpeg" length="25206902" />
-      <ns0:duration>00:24:27</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/3E3E00A5-4261-4896-9F63-EF8A11ABF795/navas-tolosa-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:24:27</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/3E3E00A5-4261-4896-9F63-EF8A11ABF795/navas-tolosa-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Alarico y la epopeya Visigoda</title>
@@ -317,8 +321,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-alarico-epopeya-visigoda_20221005633d4b2b4f0db0e49457f674.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-alarico-epopeya-visigoda_20221005633d4b2b4f0db0e49457f674.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/05/9A44656C-E102-4CCA-ADE0-8607A591B3A7/9A44656C-E102-4CCA-ADE0-8607A591B3A7.mp3" type="audio/mpeg" length="34684839" />
-      <ns0:duration>00:33:46</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/185DDB57-08CF-416A-8F40-4A5D0FB7C0F9/alarico-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:33:46</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/185DDB57-08CF-416A-8F40-4A5D0FB7C0F9/alarico-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Alejandro III de Macedonia, Alejandro Magno</title>
@@ -327,8 +331,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-alejandro-iii-macedonia-alejandro-magno_20221004633c439c113cb0e4c4c92620.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-alejandro-iii-macedonia-alejandro-magno_20221004633c439c113cb0e4c4c92620.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/04/FD29AA26-C4B8-49BE-868E-5795F04DF082/FD29AA26-C4B8-49BE-868E-5795F04DF082.mp3" type="audio/mpeg" length="35741430" />
-      <ns0:duration>00:34:10</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/18/6D1195C2-2D71-4471-83E0-BAF6627572DD/alejandro-magno-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:34:10</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/18/6D1195C2-2D71-4471-83E0-BAF6627572DD/alejandro-magno-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Miguel de Cervantes</title>
@@ -337,8 +341,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-miguel-cervantes_2022101163451c935811b0e4e4c57514.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-miguel-cervantes_2022101163451c935811b0e4e4c57514.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/11/738C71FB-F075-4295-A7F6-05B81B006CE1/738C71FB-F075-4295-A7F6-05B81B006CE1.mp3" type="audio/mpeg" length="17919451" />
-      <ns0:duration>00:17:24</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/EB005E35-BA71-4315-BDF3-0F9E641AAD94/cervantes-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:17:24</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/EB005E35-BA71-4315-BDF3-0F9E641AAD94/cervantes-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Julio César</title>
@@ -347,8 +351,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-julio-cesar_20221005633d6f43d1ddb0e47c56f21c.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-julio-cesar_20221005633d6f43d1ddb0e47c56f21c.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/05/6BD34C54-ACA8-4436-9CD6-0FF4D3EC64E4/6BD34C54-ACA8-4436-9CD6-0FF4D3EC64E4.mp3" type="audio/mpeg" length="33355609" />
-      <ns0:duration>00:32:39</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/14F7803A-BAE6-406C-880B-72982EF7A625/julio-cesar-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:32:39</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/14F7803A-BAE6-406C-880B-72982EF7A625/julio-cesar-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: William Wallace, el guardián de Escocia</title>
@@ -357,8 +361,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-william-wallace-guardian-escocia_20221004633c49129f06b0e4ec52a7fd.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-william-wallace-guardian-escocia_20221004633c49129f06b0e4ec52a7fd.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/04/D53A6F1A-5355-4A46-996C-8215B961696D/D53A6F1A-5355-4A46-996C-8215B961696D.mp3" type="audio/mpeg" length="39456038" />
-      <ns0:duration>00:38:10</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/9A8A3AFA-D43D-4A47-93E9-25271886CD03/wallace-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:38:10</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/9A8A3AFA-D43D-4A47-93E9-25271886CD03/wallace-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Inés Suárez</title>
@@ -367,8 +371,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-ines-suarez_2022101163451cf5420db0e471e4d878.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-ines-suarez_2022101163451cf5420db0e471e4d878.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/11/581BF763-B578-4ABE-8300-8A0DA6E1AE43/581BF763-B578-4ABE-8300-8A0DA6E1AE43.mp3" type="audio/mpeg" length="23453515" />
-      <ns0:duration>00:22:37</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/F6AD75FB-43DD-46DE-8D0E-8CB976E06B5D/ines-suarez-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:22:37</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/F6AD75FB-43DD-46DE-8D0E-8CB976E06B5D/ines-suarez-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Miguel Servet</title>
@@ -377,8 +381,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-miguel-servet_20221005633d76e79f06b0e4e354a7fd.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-miguel-servet_20221005633d76e79f06b0e4e354a7fd.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/05/62D4FB7E-D184-4AC5-84B3-6FCA0F007760/62D4FB7E-D184-4AC5-84B3-6FCA0F007760.mp3" type="audio/mpeg" length="23121111" />
-      <ns0:duration>00:22:05</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/6F487447-4873-4AE8-8E73-44F2E7A26D6B/servet-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:22:05</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/6F487447-4873-4AE8-8E73-44F2E7A26D6B/servet-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasaje de la Historia: Rodrigo Díaz de Vivar, el Cid Campeador</title>
@@ -387,8 +391,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasaje-historia-rodrigo-diaz-vivar-cid-campeador_20221004633c4cb89f06b0e4f452a7fd.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasaje-historia-rodrigo-diaz-vivar-cid-campeador_20221004633c4cb89f06b0e4f452a7fd.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/04/4694E0F4-FC10-4587-B38B-8A651998BBAB/4694E0F4-FC10-4587-B38B-8A651998BBAB.mp3" type="audio/mpeg" length="26874734" />
-      <ns0:duration>00:25:59</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/19F945A2-2942-4BDB-A1AC-91B7C4C5A147/cid-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:25:59</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/19F945A2-2942-4BDB-A1AC-91B7C4C5A147/cid-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Pancho Villa</title>
@@ -397,8 +401,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-pancho-villa_2022101163451fafb1a5b0e4649d7612.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-pancho-villa_2022101163451fafb1a5b0e4649d7612.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/11/5C9ABCAE-791F-4487-A7D7-9218BE02B10A/5C9ABCAE-791F-4487-A7D7-9218BE02B10A.mp3" type="audio/mpeg" length="23835505" />
-      <ns0:duration>00:23:27</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/D7E02830-D8BD-412C-8335-849F31FB1735/pancho-villa-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:23:27</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/D7E02830-D8BD-412C-8335-849F31FB1735/pancho-villa-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Billy el Niño</title>
@@ -407,8 +411,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-billy-nino_20221005633d888d9f06b0e43055a7fd.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-billy-nino_20221005633d888d9f06b0e43055a7fd.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/05/DE33C221-FA84-4E20-B348-695367476AD1/DE33C221-FA84-4E20-B348-695367476AD1.mp3" type="audio/mpeg" length="28031293" />
-      <ns0:duration>00:27:17</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/746814C6-3044-44A4-8D2C-BBDAE7980BCD/billy-nino-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:27:17</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/746814C6-3044-44A4-8D2C-BBDAE7980BCD/billy-nino-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Timur Lang, Tamerlán</title>
@@ -417,8 +421,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-timur-lang-tamerlan_20221011634521d05811b0e4eac57514.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-timur-lang-tamerlan_20221011634521d05811b0e4eac57514.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/11/785A9773-C9DE-4454-9EC0-D2FF1F590685/785A9773-C9DE-4454-9EC0-D2FF1F590685.mp3" type="audio/mpeg" length="34014219" />
-      <ns0:duration>00:33:22</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/ECE8ECA2-8C93-4E0F-A30F-DC8656C0D9E3/tamerlan-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:33:22</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/ECE8ECA2-8C93-4E0F-A30F-DC8656C0D9E3/tamerlan-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: el reino de Tartessos y sus enigmas</title>
@@ -427,8 +431,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-reino-tartessos-sus-enigmas_20221005633d9ed04f0db0e4df58f674.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-reino-tartessos-sus-enigmas_20221005633d9ed04f0db0e4df58f674.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/05/C4C1FF29-0FC6-4C7B-BFD4-E088AB1F3E1C/C4C1FF29-0FC6-4C7B-BFD4-E088AB1F3E1C.mp3" type="audio/mpeg" length="20599592" />
-      <ns0:duration>00:19:39</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/BE7B47B3-93C5-41D1-8B57-639F9E52713D/tartessos-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:19:39</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/BE7B47B3-93C5-41D1-8B57-639F9E52713D/tartessos-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Guerras Samurái</title>
@@ -437,8 +441,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-guerras-samurai_202210116345224f8fc0b0e4530d1e84.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-guerras-samurai_202210116345224f8fc0b0e4530d1e84.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2022/10/11/05C958E2-6F1F-4893-9C0E-3599CDAB666A/05C958E2-6F1F-4893-9C0E-3599CDAB666A.mp3" type="audio/mpeg" length="26874748" />
-      <ns0:duration>00:25:31</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/BE28F5F1-95AC-43A2-9634-14F0466C4AE3/samurai-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:25:31</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/BE28F5F1-95AC-43A2-9634-14F0466C4AE3/samurai-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Gonzalo Fernández de Córdoba, 'El Gran Capitán'</title>
@@ -447,8 +451,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-gonzalo-fernandez-cordoba-gran-capitan_20221005633da0a00e2ab0e4a7e8dfd8.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-gonzalo-fernandez-cordoba-gran-capitan_20221005633da0a00e2ab0e4a7e8dfd8.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/05/A0D2F9ED-F2CF-46C6-8A35-DFA401945FD4/A0D2F9ED-F2CF-46C6-8A35-DFA401945FD4.mp3" type="audio/mpeg" length="35268550" />
-      <ns0:duration>00:33:42</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/ABDF1AC5-99E3-4F61-BA69-207F167B406A/gran-capitan-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:33:42</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/ABDF1AC5-99E3-4F61-BA69-207F167B406A/gran-capitan-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Batalla de Waterloo</title>
@@ -457,8 +461,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-batalla-waterloo_20221005633da2774f0db0e4e658f674.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-batalla-waterloo_20221005633da2774f0db0e4e658f674.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/05/5596BAAA-B132-45F1-A6ED-35F2E54E0B72/5596BAAA-B132-45F1-A6ED-35F2E54E0B72.mp3" type="audio/mpeg" length="36077307" />
-      <ns0:duration>00:35:19</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/9F3032B2-1270-4895-8559-69ACA5231A50/waterloo-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:35:19</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/9F3032B2-1270-4895-8559-69ACA5231A50/waterloo-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Guerra de Secesión de Estados Unidos, Batalla de Gettysburg</title>
@@ -467,8 +471,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-guerra-secesion-estados-unidos-batalla-gettysburg_20221005633da5a89f06b0e48155a7fd.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-guerra-secesion-estados-unidos-batalla-gettysburg_20221005633da5a89f06b0e48155a7fd.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/05/C88BF06E-95CE-4698-99AF-A78699437E52/C88BF06E-95CE-4698-99AF-A78699437E52.mp3" type="audio/mpeg" length="28556879" />
-      <ns0:duration>00:27:55</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/3C087141-E55C-417F-A6C3-F9C12E0A1699/gettysburg-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:27:55</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2022/10/19/3C087141-E55C-417F-A6C3-F9C12E0A1699/gettysburg-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Revolución Norteamericana</title>
@@ -477,8 +481,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-revolucion-norteamericana_20221005633da8a10e2ab0e4bde8dfd8.html</guid>
       <link>https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-revolucion-norteamericana_20221005633da8a10e2ab0e4bde8dfd8.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios4//2022/10/05/79C2833A-FE79-40C1-94D4-5A6EAC9E349A/79C2833A-FE79-40C1-94D4-5A6EAC9E349A.mp3" type="audio/mpeg" length="35980712" />
-      <ns0:duration>00:34:22</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/693BEA89-A86A-454D-9BAF-F2B6B4D82862/revolucion-norteamericana-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:34:22</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/19/693BEA89-A86A-454D-9BAF-F2B6B4D82862/revolucion-norteamericana-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la historia: Leonardo Da Vinci</title>
@@ -487,8 +491,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-leonardo-vinci_201604155710cc350cf2569c4516dd97.html</guid>
       <link>https://www.ondacero.es/programas/la-rosa-de-los-vientos/audios-podcast/pasajes-de-la-historia/pasajes-de-la-historia-leonardo-da-vinci_201604155710d15c6584a891ed1983fd.html</link>
       <enclosure url="https://dpvclip.ondacero.es/mp_audios5//2016/04/15/64FED263-D1D2-40A1-8F56-01A1143E4302/64FED263-D1D2-40A1-8F56-01A1143E4302.mp3" type="audio/mpeg" length="10624305" />
-      <ns0:duration>00:22:30</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/24/1C7F63FF-5225-4392-A3FD-F609868422C2/leonardo-vinci-pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:22:30</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/24/1C7F63FF-5225-4392-A3FD-F609868422C2/leonardo-vinci-pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la historia: El Álamo</title>
@@ -497,8 +501,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-alamo_201403105542cc95d7fef20c62af8122.html</guid>
       <link>https://www.ondacero.es/programas/la-rosa-de-los-vientos/audios-podcast/pasajes-de-la-historia/pasajes-historia-alamo_201403105542cc960cf25695d42fb37f.html</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios1//audios//ondacero.es/2014/03/10/00140.mp3" type="audio/mpeg" length="7088102" />
-      <ns0:duration>00:19:21</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2017/10/20/50FDAAB8-4923-4967-9114-1DACA446C1EB/default.jpg" />
+      <itunes:duration>00:19:21</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2017/10/20/50FDAAB8-4923-4967-9114-1DACA446C1EB/default.jpg" />
     </item>
     <item>
       <title>Pasajes de la historia: Rosalía de Castro</title>
@@ -507,8 +511,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-rosalia-castro_20140126554303c31b13f20cc2c069c1.html</guid>
       <link>https://www.ondacero.es/programas/la-rosa-de-los-vientos/audios-podcast/pasajes-de-la-historia/pasajes-historia-rosalia-castro_20140126554303c30cf2c2fca20a78b4.html</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios3//audios//ondacero.es/2014/01/26/00043.mp3" type="audio/mpeg" length="6296905" />
-      <ns0:duration>00:17:11</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2011/07/24/797019E0-65C3-4235-AD89-2AF36530CF04/default.jpg" />
+      <itunes:duration>00:17:11</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2011/07/24/797019E0-65C3-4235-AD89-2AF36530CF04/default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Galileo Galilei</title>
@@ -517,8 +521,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-galileo-galilei_20140113554311871b13f20ce1c469c1.html</guid>
       <link>https://www.ondacero.es/programas/la-rosa-de-los-vientos/audios-podcast/pasaje-historia-galileo-galilei_20140113554311870cf2c2fca20a8d01.html</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios2//audios//ondacero.es/2014/01/13/00093.mp3" type="audio/mpeg" length="9662556" />
-      <ns0:duration>00:26:23</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2011/05/17/95F788B5-823E-427F-9DC7-01257D10BEA0/default.jpg" />
+      <itunes:duration>00:26:23</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2011/05/17/95F788B5-823E-427F-9DC7-01257D10BEA0/default.jpg" />
     </item>
     <item>
       <title>Pasajes de la historia: Robert Louis Balfour Stevenson</title>
@@ -527,8 +531,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-robert-louis-balfour-stevenson_201312015543330ad7fef20cbac88122.html</guid>
       <link>https://goo.gl/6Kym15</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios1//audios//ondacero.es/2013/12/01/00027.mp3" type="audio/mpeg" length="9487818" />
-      <ns0:duration>00:25:54</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2013/12/01/05EBECBF-27E6-4B16-B212-1B1590F5A9AF/default.jpg" />
+      <itunes:duration>00:25:54</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2013/12/01/05EBECBF-27E6-4B16-B212-1B1590F5A9AF/default.jpg" />
     </item>
     <item>
       <title>Pasaje de la historia: Miguel Servet</title>
@@ -537,8 +541,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasaje-historia-miguel-servet_201309305543752ed7fef20cd9d98122.html</guid>
       <link>https://www.ondacero.es/programas/la-rosa-de-los-vientos/audios-podcast/pasaje-historia-miguel-servet_201309305543752e0cf25695d4308fd6.html</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios3//audios//ondacero.es/2013/09/30/00105.mp3" type="audio/mpeg" length="8086563" />
-      <ns0:duration>00:22:05</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2011/05/07/F648F989-A4B9-49FA-ABFC-98ADF7DFAE3C/default.jpg" />
+      <itunes:duration>00:22:05</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2011/05/07/F648F989-A4B9-49FA-ABFC-98ADF7DFAE3C/default.jpg" />
     </item>
     <item>
       <title>Pasaje de la historia: La batalla de Stalingrado</title>
@@ -547,8 +551,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasaje-historia-batalla-stalingrado_20130206554449a3d7fef20c6a0c8222.html</guid>
       <link>https://www.ondacero.es/programas/la-rosa-de-los-vientos/audios-podcast/pasaje-historia-batalla-stalingrado_20130206554449a40cf2c2fca20c1821.html</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios1//audios//ondacero.es/2013/02/06/00151.mp3" type="audio/mpeg" length="9097405" />
-      <ns0:duration>00:24:50</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2013/01/31/D0C66BF9-DF43-40E1-AF39-0D5605412878/default.jpg" />
+      <itunes:duration>00:24:50</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2013/01/31/D0C66BF9-DF43-40E1-AF39-0D5605412878/default.jpg" />
     </item>
     <item>
       <title>Pasajes de la historia: Juana de Arco</title>
@@ -557,8 +561,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-juana-arco_201301245544578ed7fef20c440f8222.html</guid>
       <link>https://goo.gl/aB948B</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios3//audios//ondacero.es/2013/01/24/00161.mp3" type="audio/mpeg" length="6429503" />
-      <ns0:duration>00:17:33</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2011/07/27/313B148C-592B-4505-A540-DB9D8F88C81C/default.jpg" />
+      <itunes:duration>00:17:33</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2011/07/27/313B148C-592B-4505-A540-DB9D8F88C81C/default.jpg" />
     </item>
     <item>
       <title>Pasajes de la historia: Alfred Nobel vs Gösta Mittag-Leffler</title>
@@ -567,8 +571,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-alfred-nobel-gosta-mittagleffler_20121021554534e0d7fef20cb5238222.html</guid>
       <link>https://goo.gl/t58vnr</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios3//audios//ondacero.es/2012/10/21/00020.mp3" type="audio/mpeg" length="3421418" />
-      <ns0:duration>00:09:20</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
+      <itunes:duration>00:09:20</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages02/2022/10/17/4524AA67-6E3A-4141-BC3A-87326602A3E4/pasajes-historia-juan-antonio-cebrian_default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: Abderrahman I y el explendor de los Omeya</title>
@@ -577,8 +581,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-abderrahman-explendor-omeya_2012072355458a77d7fef20cf9348222.html</guid>
       <link>http://www.ondacero.es/programas/la-rosa-de-los-vientos/audios-podcast/pasajes-de-la-historia/pasajes-historia-abderraman_2012072355458a780cf25695d43299d6.html</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios3//audios//ondacero.es/2012/07/23/00030.mp3" type="audio/mpeg" length="6718665" />
-      <ns0:duration>00:18:22</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2012/07/23/8436966D-9470-42E3-9485-441D4DF1F245/default.jpg" />
+      <itunes:duration>00:18:22</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2012/07/23/8436966D-9470-42E3-9485-441D4DF1F245/default.jpg" />
     </item>
     <item>
       <title>Pasajes de la Historia: H.P Lovecraft</title>
@@ -587,7 +591,7 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-lovecraft_201203255545f8b01b13f20c47566ac1.html</guid>
       <link>https://www.ondacero.es/programas/la-rosa-de-los-vientos/audios-podcast/pasajes-de-la-historia/pasajes-historia-aniversario-muerte-lovecraft_201203255545f8b20cf25695d4331417.html</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios3//audios//ondacero.es/2012/03/25/00014.mp3" type="audio/mpeg" length="8487011" />
-      <ns0:duration>00:23:12</ns0:duration>
+      <itunes:duration>00:23:12</itunes:duration>
     </item>
     <item>
       <title>Pasaje de la historia: Napoleón Bonaparte en la batalla de Austerlitz</title>
@@ -596,8 +600,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasaje-historia-napoleon-bonaparte-batalla-austerlitz_20111023554676c01b13f20c7d716ac1.html</guid>
       <link>https://goo.gl/rxpppb</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios3//audios//ondacero.es/2011/10/23/00012.mp3" type="audio/mpeg" length="10912668" />
-      <ns0:duration>00:29:50</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2011/10/23/E36D5033-4517-4911-A5D0-7D7F15E1323F/default.jpg" />
+      <itunes:duration>00:29:50</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2011/10/23/E36D5033-4517-4911-A5D0-7D7F15E1323F/default.jpg" />
     </item>
     <item>
       <title>Pasajes de la historia: Rasputín</title>
@@ -606,8 +610,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-rasputin_2011081555469bfcd7fef20c4c6e8222.html</guid>
       <link>https://www.ondacero.es/programas/la-rosa-de-los-vientos/audios-podcast/pasajes-de-la-historia/pasajes-historia-rasputin_2011081555469bfd0cf2c2fca20e2fac.html</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios2//audios//ondacero.es/2011/08/15/00030.mp3" type="audio/mpeg" length="8630956" />
-      <ns0:duration>00:23:35</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2011/08/15/69E75CB2-F229-4747-A2A2-DF6DC9091C19/default.jpg" />
+      <itunes:duration>00:23:35</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2011/08/15/69E75CB2-F229-4747-A2A2-DF6DC9091C19/default.jpg" />
     </item>
     <item>
       <title>Pasajes de la historia: Asdrúbal y Cartago</title>
@@ -616,8 +620,8 @@
       <guid isPermaLink="false">https://www.ondacero.es/podcast/originales/pasajes-historia/pasajes-historia-asdrubal-cartago_201107175546a7f91b13f20c1d7d6ac1.html</guid>
       <link>https://www.ondacero.es/programas/la-rosa-de-los-vientos/audios-podcast/pasajes-de-la-historia/pasajes-historia-asdrubal-cartago_201107175546a7fa0cf25695d433cd8e.html</link>
       <enclosure url="https://dpvclip.ondacero.es//mp_audios2//audios//ondacero.es/2011/07/17/00008.mp3" type="audio/mpeg" length="6951628" />
-      <ns0:duration>00:19:00</ns0:duration>
-      <ns0:image href="https://image.ondacero.es/clipping/cmsimages01/2011/07/17/759F9399-87F9-4A4C-9289-E2C244043973/default.jpg" />
+      <itunes:duration>00:19:00</itunes:duration>
+      <itunes:image href="https://image.ondacero.es/clipping/cmsimages01/2011/07/17/759F9399-87F9-4A4C-9289-E2C244043973/default.jpg" />
     </item>
   </channel>
 </rss>
