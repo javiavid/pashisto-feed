@@ -29,6 +29,29 @@ def clean_episode_title(title):
         return title[len(prefix):]
     return title
 
+def get_episode_duration(entry):
+    """Extrae la duración del episodio de múltiples fuentes posibles"""
+    
+    # Intento 1: itunes_duration (forma más común)
+    if hasattr(entry, 'itunes_duration'):
+        return str(entry.itunes_duration)
+    
+    # Intento 2: buscar en tags con namespace itunes
+    if hasattr(entry, 'tags'):
+        for tag in entry.tags:
+            if 'duration' in tag.get('term', '').lower():
+                return tag.get('label', '')
+    
+    # Intento 3: buscar directamente en el diccionario del entry
+    if 'itunes_duration' in entry:
+        return str(entry['itunes_duration'])
+    
+    # Intento 4: Mirar en los links por si está ahí
+    if hasattr(entry, 'duration'):
+        return str(entry.duration)
+    
+    return None
+
 def modify_duplicate_dates(feed_url):
     """Descarga RSS y modifica fechas duplicadas"""
     
@@ -200,10 +223,14 @@ def create_rss_xml(original_feed, modified_entries):
                     enclosure.set('length', str(link.get('length', '0')))
                     break
         
-        # Duración iTunes
-        if hasattr(entry, 'itunes_duration'):
+        # Duración iTunes (MEJORADO)
+        duration = get_episode_duration(entry)
+        if duration:
             itunes_duration = ET.SubElement(item, '{http://www.itunes.com/dtds/podcast-1.0.dtd}duration')
-            itunes_duration.text = str(entry.itunes_duration)
+            itunes_duration.text = duration
+            print(f"  Duración añadida: {duration}")
+        else:
+            print(f"  ⚠ Sin duración para: {clean_title}")
         
         # Imagen del episodio
         if hasattr(entry, 'image') and isinstance(entry.image, dict) and 'href' in entry.image:
@@ -240,8 +267,9 @@ def main():
     for i, ep in enumerate(modified_entries[:5]):
         original_title = ep['entry'].get('title', 'Sin título')
         clean_title = clean_episode_title(original_title)
+        duration = get_episode_duration(ep['entry'])
         print(f"{i+1}. {clean_title}")
-        print(f"   Fecha: {ep['modified_date'].strftime('%Y-%m-%d')}")
+        print(f"   Fecha: {ep['modified_date'].strftime('%Y-%m-%d')} | Duración: {duration if duration else 'N/A'}")
 
 if __name__ == "__main__":
     main()
