@@ -72,17 +72,13 @@ def modify_duplicate_dates(feed_url):
     return feed, modified_entries
 
 def create_rss_xml(original_feed, modified_entries):
-    """Crea archivo XML RSS con las fechas modificadas y metadatos completos"""
+    """Crea archivo XML RSS con las fechas modificadas"""
     
-    # Registrar namespace iTunes
-    ET.register_namespace('itunes', 'http://www.itunes.com/dtds/podcast-1.0.dtd')
-    ET.register_namespace('content', 'http://purl.org/rss/1.0/modules/content/')
-    
-    # Crear estructura RSS 2.0
-    rss = ET.Element('rss', version='2.0', attrib={
-        'xmlns:itunes': 'http://www.itunes.com/dtds/podcast-1.0.dtd',
-        'xmlns:content': 'http://purl.org/rss/1.0/modules/content/'
-    })
+    # Crear RSS root - SIN duplicar namespaces
+    rss = ET.Element('rss')
+    rss.set('version', '2.0')
+    rss.set('xmlns:itunes', 'http://www.itunes.com/dtds/podcast-1.0.dtd')
+    rss.set('xmlns:content', 'http://purl.org/rss/1.0/modules/content/')
     
     channel = ET.SubElement(rss, 'channel')
     
@@ -94,9 +90,13 @@ def create_rss_xml(original_feed, modified_entries):
     # Copiar metadatos del feed original
     original_channel = original_feed.feed
     
-    # Idioma
+    # Idioma (formato correcto es 'es' no 'es-es')
     if hasattr(original_channel, 'language'):
-        ET.SubElement(channel, 'language').text = original_channel.language
+        lang = original_channel.language
+        # Normalizar a formato de 2 letras si es necesario
+        if lang.startswith('es'):
+            lang = 'es'
+        ET.SubElement(channel, 'language').text = lang
     else:
         ET.SubElement(channel, 'language').text = 'es'
     
@@ -106,55 +106,43 @@ def create_rss_xml(original_feed, modified_entries):
     
     # Autor iTunes
     if hasattr(original_channel, 'author'):
-        ET.SubElement(channel, '{http://www.itunes.com/dtds/podcast-1.0.dtd}author').text = original_channel.author
+        itunes_author = ET.SubElement(channel, '{http://www.itunes.com/dtds/podcast-1.0.dtd}author')
+        itunes_author.text = original_channel.author
     elif hasattr(original_channel, 'itunes_author'):
-        ET.SubElement(channel, '{http://www.itunes.com/dtds/podcast-1.0.dtd}author').text = original_channel.itunes_author
+        itunes_author = ET.SubElement(channel, '{http://www.itunes.com/dtds/podcast-1.0.dtd}author')
+        itunes_author.text = original_channel.itunes_author
     
-    # Imagen del podcast (CRÍTICO para Yoto)
-    # Intentar obtener de múltiples fuentes
+    # Imagen del podcast
     podcast_image_url = None
     
-    if hasattr(original_channel, 'image') and 'href' in original_channel.image:
-        podcast_image_url = original_channel.image.href
-    elif hasattr(original_channel, 'image') and 'url' in original_channel.image:
-        podcast_image_url = original_channel.image.url
+    if hasattr(original_channel, 'image') and isinstance(original_channel.image, dict):
+        podcast_image_url = original_channel.image.get('href', original_channel.image.get('url', ''))
     elif hasattr(original_channel, 'itunes_image'):
         if isinstance(original_channel.itunes_image, dict):
             podcast_image_url = original_channel.itunes_image.get('href', '')
         else:
-            podcast_image_url = original_channel.itunes_image
+            podcast_image_url = str(original_channel.itunes_image)
     
-    # Añadir imagen estándar RSS
+    # Si encontramos imagen, añadirla
     if podcast_image_url:
-        image = ET.SubElement(channel, 'image')
-        ET.SubElement(image, 'url').text = podcast_image_url
-        ET.SubElement(image, 'title').text = config.FEED_TITLE
-        ET.SubElement(image, 'link').text = config.FEED_LINK
+        # Imagen RSS estándar
+        image_elem = ET.SubElement(channel, 'image')
+        ET.SubElement(image_elem, 'url').text = podcast_image_url
+        ET.SubElement(image_elem, 'title').text = config.FEED_TITLE
+        ET.SubElement(image_elem, 'link').text = config.FEED_LINK
         
-        # Añadir imagen iTunes (formato preferido por Yoto)
-        ET.SubElement(channel, '{http://www.itunes.com/dtds/podcast-1.0.dtd}image', 
-                     href=podcast_image_url)
-    
-    # Categoría iTunes
-    if hasattr(original_channel, 'itunes_category'):
-        category = ET.SubElement(channel, '{http://www.itunes.com/dtds/podcast-1.0.dtd}category',
-                                text=original_channel.itunes_category)
+        # Imagen iTunes
+        itunes_image = ET.SubElement(channel, '{http://www.itunes.com/dtds/podcast-1.0.dtd}image')
+        itunes_image.set('href', podcast_image_url)
     
     # Explicit
+    itunes_explicit = ET.SubElement(channel, '{http://www.itunes.com/dtds/podcast-1.0.dtd}explicit')
     if hasattr(original_channel, 'itunes_explicit'):
-        ET.SubElement(channel, '{http://www.itunes.com/dtds/podcast-1.0.dtd}explicit').text = original_channel.itunes_explicit
+        itunes_explicit.text = original_channel.itunes_explicit
     else:
-        ET.SubElement(channel, '{http://www.itunes.com/dtds/podcast-1.0.dtd}explicit').text = 'no'
+        itunes_explicit.text = 'no'
     
-    # Owner
-    if hasattr(original_channel, 'itunes_owner_name') or hasattr(original_channel, 'itunes_owner_email'):
-        owner = ET.SubElement(channel, '{http://www.itunes.com/dtds/podcast-1.0.dtd}owner')
-        if hasattr(original_channel, 'itunes_owner_name'):
-            ET.SubElement(owner, '{http://www.itunes.com/dtds/podcast-1.0.dtd}name').text = original_channel.itunes_owner_name
-        if hasattr(original_channel, 'itunes_owner_email'):
-            ET.SubElement(owner, '{http://www.itunes.com/dtds/podcast-1.0.dtd}email').text = original_channel.itunes_owner_email
-    
-    # Añadir episodios con fechas modificadas
+    # Añadir episodios
     for episode_data in modified_entries:
         entry = episode_data['entry']
         modified_date = episode_data['modified_date']
@@ -168,63 +156,50 @@ def create_rss_xml(original_feed, modified_entries):
         description = entry.get('summary', entry.get('description', ''))
         ET.SubElement(item, 'description').text = description
         
-        # Fecha modificada (CRÍTICO para Yoto)
+        # Fecha modificada (RFC-2822 format)
         ET.SubElement(item, 'pubDate').text = format_date(modified_date)
         
         # GUID
         guid_text = entry.get('id', entry.get('link', str(modified_date)))
-        ET.SubElement(item, 'guid', isPermaLink='false').text = guid_text
+        guid_elem = ET.SubElement(item, 'guid')
+        guid_elem.set('isPermaLink', 'false')
+        guid_elem.text = guid_text
         
         # Enlace
         if 'link' in entry:
             ET.SubElement(item, 'link').text = entry.link
         
-        # Audio enclosure (CRÍTICO)
+        # Audio enclosure
         enclosure_found = False
         
         if hasattr(entry, 'enclosures') and len(entry.enclosures) > 0:
             enc = entry.enclosures[0]
             url = enc.get('href', enc.get('url', ''))
             if url:
-                ET.SubElement(item, 'enclosure', {
-                    'url': url,
-                    'type': enc.get('type', 'audio/mpeg'),
-                    'length': str(enc.get('length', '0'))
-                })
+                enclosure = ET.SubElement(item, 'enclosure')
+                enclosure.set('url', url)
+                enclosure.set('type', enc.get('type', 'audio/mpeg'))
+                enclosure.set('length', str(enc.get('length', '0')))
                 enclosure_found = True
         
         if not enclosure_found and hasattr(entry, 'links'):
             for link in entry.links:
                 if link.get('type', '').startswith('audio'):
-                    ET.SubElement(item, 'enclosure', {
-                        'url': link.get('href', ''),
-                        'type': link.get('type', 'audio/mpeg'),
-                        'length': str(link.get('length', '0'))
-                    })
+                    enclosure = ET.SubElement(item, 'enclosure')
+                    enclosure.set('url', link.get('href', ''))
+                    enclosure.set('type', link.get('type', 'audio/mpeg'))
+                    enclosure.set('length', str(link.get('length', '0')))
                     break
         
         # Duración iTunes
         if hasattr(entry, 'itunes_duration'):
-            ET.SubElement(item, '{http://www.itunes.com/dtds/podcast-1.0.dtd}duration').text = str(entry.itunes_duration)
+            itunes_duration = ET.SubElement(item, '{http://www.itunes.com/dtds/podcast-1.0.dtd}duration')
+            itunes_duration.text = str(entry.itunes_duration)
         
-        # Autor iTunes
-        if hasattr(entry, 'author'):
-            ET.SubElement(item, '{http://www.itunes.com/dtds/podcast-1.0.dtd}author').text = entry.author
-        elif hasattr(entry, 'itunes_author'):
-            ET.SubElement(item, '{http://www.itunes.com/dtds/podcast-1.0.dtd}author').text = entry.itunes_author
-        
-        # Subtítulo iTunes
-        if hasattr(entry, 'itunes_subtitle'):
-            ET.SubElement(item, '{http://www.itunes.com/dtds/podcast-1.0.dtd}subtitle').text = entry.itunes_subtitle
-        
-        # Summary iTunes
-        if hasattr(entry, 'itunes_summary'):
-            ET.SubElement(item, '{http://www.itunes.com/dtds/podcast-1.0.dtd}summary').text = entry.itunes_summary
-        
-        # Imagen del episodio (opcional pero útil)
-        if hasattr(entry, 'image') and 'href' in entry.image:
-            ET.SubElement(item, '{http://www.itunes.com/dtds/podcast-1.0.dtd}image', 
-                         href=entry.image.href)
+        # Imagen del episodio
+        if hasattr(entry, 'image') and isinstance(entry.image, dict) and 'href' in entry.image:
+            itunes_ep_image = ET.SubElement(item, '{http://www.itunes.com/dtds/podcast-1.0.dtd}image')
+            itunes_ep_image.set('href', entry.image.href)
     
     return rss
 
