@@ -297,6 +297,7 @@ def create_rss_xml(original_feed, modified_entries):
     
     # Añadir episodios
     episodes_with_duration = 0
+    episodes_with_summary = 0
     
     for episode_data in modified_entries:
         entry = episode_data['entry']
@@ -317,6 +318,7 @@ def create_rss_xml(original_feed, modified_entries):
         itunes_summary = entry.get('summary_from_xml')
         if itunes_summary:
             ET.SubElement(item, 'itunes:summary').text = itunes_summary
+            episodes_with_summary += 1
         
         # Fecha modificada
         ET.SubElement(item, 'pubDate').text = format_date(modified_date)
@@ -366,7 +368,8 @@ def create_rss_xml(original_feed, modified_entries):
             itunes_ep_image.set('href', entry.image.href)
     
     print(f"Episodios con duración: {episodes_with_duration}/{len(modified_entries)}")
-    
+    print(f"Episodios con summary: {episodes_with_summary}/{len(modified_entries)}")
+
     return rss
 
 def main():
