@@ -42,6 +42,36 @@ def clean_episode_title(title):
         return title[len(prefix):]
     return title
 
+def extract_episode_metadata(xml_content):
+    """Extrae duraciones y summaries usando regex con múltiples métodos de matching"""
+    durations_map = {}
+    summaries_map = {}
+
+    # Dividir en items
+    items = re.findall(r'<item>.*?</item>', xml_content, re.DOTALL)
+
+    for idx, item in enumerate(items):
+        # Extraer GUID
+        guid_match = re.search(r'<guid[^>]*>([^<]+)</guid>', item)
+        if not guid_match:
+            continue
+
+        guid = guid_match.group(1).strip()
+
+        # Extraer duración
+        duration_match = re.search(r'<itunes:duration>([^<]+)</itunes:duration>', item)
+        if duration_match:
+            durations_map[guid] = duration_match.group(1).strip()
+
+        # Extraer summary de iTunes
+        summary_match = re.search(r'<itunes:summary>([^<]+)</itunes:summary>', item)
+        if summary_match:
+            summaries_map[guid] = summary_match.group(1).strip()
+
+    print(f"  ✓ Duraciones extraídas: {len(durations_map)} items")
+    print(f"  ✓ Summaries extraídos: {len(summaries_map)} items")
+    return durations_map, summaries_map
+
 def extract_durations_simple(xml_content):
     """Extrae duraciones usando regex con múltiples métodos de matching"""
     durations_map = {}
@@ -69,38 +99,38 @@ def extract_durations_simple(xml_content):
     print(f"  ✓ Duraciones extraídas: {len(durations_map)} items")
     return durations_map
 
-def get_durations_from_xml(feed_url):
-    """Descarga el XML y extrae las duraciones"""
+def get_metadata_from_xml(feed_url):
+    """Descarga el XML y extrae duraciones y summaries"""
     try:
         request = urllib.request.Request(
             feed_url,
             headers={'User-Agent': 'Mozilla/5.0'}
         )
-        
+
         with urllib.request.urlopen(request, timeout=30) as response:
             xml_content = response.read().decode('utf-8')
-        
-        durations_map = extract_durations_simple(xml_content)
-        print(f"Duraciones extraídas del feed original: {len(durations_map)}")
-        
-        return durations_map
-        
-    except Exception as e:
-        print(f"ERROR extrayendo duraciones: {e}")
-        return {}
 
-def modify_duplicate_dates(feed_url, durations_map):
+        durations_map, summaries_map = extract_episode_metadata(xml_content)
+        print(f"Metadatos extraídos del feed original: {len(durations_map)} duraciones, {len(summaries_map)} summaries")
+
+        return durations_map, summaries_map
+
+    except Exception as e:
+        print(f"ERROR extrayendo metadatos: {e}")
+        return {}, {}
+
+def modify_duplicate_dates(feed_url, durations_map, summaries_map):
     """Descarga RSS y modifica fechas duplicadas"""
-    
+
     feed = feedparser.parse(feed_url)
-    
+
     if not feed.entries:
         print("ERROR: No se encontraron episodios")
         return feed, []
-    
+
     # Agrupar episodios por fecha
     date_groups = defaultdict(list)
-    
+
     for entry in feed.entries:
         if hasattr(entry, 'published_parsed') and entry.published_parsed:
             date_obj = datetime(*entry.published_parsed[:6])
@@ -108,7 +138,7 @@ def modify_duplicate_dates(feed_url, durations_map):
             date_obj = parse_date(entry.published)
         else:
             date_obj = datetime.now()
-        
+
         date_obj = date_obj.replace(tzinfo=None)
         date_key = date_obj.date()
 
@@ -116,36 +146,50 @@ def modify_duplicate_dates(feed_url, durations_map):
             'entry': entry,
             'original_date': date_obj
         })
-    
-    # Asignar duraciones a episodios
-    matched_count = 0
+
+    # Asignar duraciones y summaries a episodios
+    duration_matched = 0
+    summary_matched = 0
     for date_key, episodes in date_groups.items():
         for episode_data in episodes:
             entry = episode_data['entry']
 
-            # Método 1: Usar el ID (GUID) de feedparser
+            # Mapear duración
             guid = entry.get('id', '')
+            link = entry.get('link', '')
+
+            # Método 1: Usar el ID (GUID) de feedparser
             if guid and guid in durations_map:
                 entry['duration_from_xml'] = durations_map[guid]
-                matched_count += 1
-                continue
-
+                duration_matched += 1
             # Método 2: Usar el link como fallback
-            link = entry.get('link', '')
-            if link and link in durations_map:
+            elif link and link in durations_map:
                 entry['duration_from_xml'] = durations_map[link]
-                matched_count += 1
-                continue
-
+                duration_matched += 1
             # Método 3: Intentar extraer GUID del link
-            # Algunos feeds usan la URL como GUID
-            for guid_key in durations_map.keys():
-                if guid_key in link or link in guid_key:
-                    entry['duration_from_xml'] = durations_map[guid_key]
-                    matched_count += 1
-                    break
+            else:
+                for guid_key in durations_map.keys():
+                    if guid_key in link or link in guid_key:
+                        entry['duration_from_xml'] = durations_map[guid_key]
+                        duration_matched += 1
+                        break
 
-    print(f"Episodios con duración mapeada: {matched_count}/{len(feed.entries)}")
+            # Mapear summary (misma lógica)
+            if guid and guid in summaries_map:
+                entry['summary_from_xml'] = summaries_map[guid]
+                summary_matched += 1
+            elif link and link in summaries_map:
+                entry['summary_from_xml'] = summaries_map[link]
+                summary_matched += 1
+            else:
+                for guid_key in summaries_map.keys():
+                    if guid_key in link or link in guid_key:
+                        entry['summary_from_xml'] = summaries_map[guid_key]
+                        summary_matched += 1
+                        break
+
+    print(f"Episodios con duración mapeada: {duration_matched}/{len(feed.entries)}")
+    print(f"Episodios con summary mapeado: {summary_matched}/{len(feed.entries)}")
 
     # Modificar fechas duplicadas
     modified_entries = []
@@ -268,6 +312,11 @@ def create_rss_xml(original_feed, modified_entries):
         # Descripción
         description = entry.get('summary', entry.get('description', ''))
         ET.SubElement(item, 'description').text = description
+
+        # iTunes summary (si existe en el XML original)
+        itunes_summary = entry.get('summary_from_xml')
+        if itunes_summary:
+            ET.SubElement(item, 'itunes:summary').text = itunes_summary
         
         # Fecha modificada
         ET.SubElement(item, 'pubDate').text = format_date(modified_date)
@@ -323,14 +372,14 @@ def create_rss_xml(original_feed, modified_entries):
 def main():
     print("=== Modificando RSS de Pasajes de la Historia ===\n")
 
-    print("Paso 1: Extrayendo duraciones del XML original...")
-    durations_map = get_durations_from_xml(config.ORIGINAL_FEED_URL)
+    print("Paso 1: Extrayendo metadatos del XML original...")
+    durations_map, summaries_map = get_metadata_from_xml(config.ORIGINAL_FEED_URL)
 
     if not durations_map:
         print("⚠ ADVERTENCIA: No se pudieron extraer duraciones del feed original")
 
-    print("\nPaso 2: Modificando fechas duplicadas y mapeando duraciones...")
-    original_feed, modified_entries = modify_duplicate_dates(config.ORIGINAL_FEED_URL, durations_map)
+    print("\nPaso 2: Modificando fechas duplicadas y mapeando metadatos...")
+    original_feed, modified_entries = modify_duplicate_dates(config.ORIGINAL_FEED_URL, durations_map, summaries_map)
 
     if not modified_entries:
         print("ERROR: No se pudieron procesar episodios")
@@ -348,12 +397,14 @@ def main():
         ET.indent(tree, space='  ')
     tree.write('feed.xml', encoding='utf-8', xml_declaration=True)
 
-    # Verificar que se escribieron las duraciones
+    # Verificar que se escribieron los metadatos
     with open('feed.xml', 'r', encoding='utf-8') as f:
         feed_content = f.read()
         duration_count = feed_content.count('<itunes:duration>')
+        summary_count = feed_content.count('<itunes:summary>')
         print(f"\n✓ Feed generado: {config.FEED_LINK}")
         print(f"✓ Duraciones en el feed: {duration_count} episodios")
+        print(f"✓ Summaries en el feed: {summary_count} episodios")
 
         if duration_count == 0:
             print("⚠ ADVERTENCIA: No se encontraron duraciones en el feed generado")
@@ -362,6 +413,9 @@ def main():
             print(f"⚠ ADVERTENCIA: Solo {duration_count}/{len(modified_entries)} episodios tienen duración")
         else:
             print(f"✓ Todos los episodios tienen duración correctamente asignada")
+
+        if summary_count > 0:
+            print(f"✓ Summaries de iTunes correctamente añadidos")
 
 if __name__ == "__main__":
     main()
