@@ -1,0 +1,39 @@
+name: Update RSS Feed
+
+on:
+  schedule:
+    # Se ejecuta cada 6 horas
+    - cron: '0 */6 * * *'
+  
+  # Permite ejecución manual desde GitHub
+  workflow_dispatch:
+  
+  # Se ejecuta al hacer push (para la primera vez)
+  push:
+    branches: [ main ]
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install feedparser
+      
+      - name: Run RSS modifier script
+        run: python modify_rss.py
+      
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Auto-update RSS feed'
+          file_pattern: 'feed.xml'
