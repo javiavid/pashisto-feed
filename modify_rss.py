@@ -22,6 +22,13 @@ def format_date(dt):
         dt = dt.replace(tzinfo=None)
     return dt.strftime("%a, %d %b %Y %H:%M:%S GMT")
 
+def clean_episode_title(title):
+    """Elimina el prefijo 'Pasajes de la Historia: ' del título"""
+    prefix = "Pasajes de la Historia: "
+    if title.startswith(prefix):
+        return title[len(prefix):]
+    return title
+
 def modify_duplicate_dates(feed_url):
     """Descarga RSS y modifica fechas duplicadas"""
     
@@ -149,8 +156,10 @@ def create_rss_xml(original_feed, modified_entries):
         
         item = ET.SubElement(channel, 'item')
         
-        # Título
-        ET.SubElement(item, 'title').text = entry.get('title', 'Sin título')
+        # Título (limpio, sin prefijo)
+        original_title = entry.get('title', 'Sin título')
+        clean_title = clean_episode_title(original_title)
+        ET.SubElement(item, 'title').text = clean_title
         
         # Descripción
         description = entry.get('summary', entry.get('description', ''))
@@ -227,9 +236,11 @@ def main():
     print(f"✓ URL del feed: {config.FEED_LINK}")
     
     # Mostrar algunos ejemplos
-    print("\n--- Primeros 5 episodios ---")
+    print("\n--- Primeros 5 episodios (con títulos limpios) ---")
     for i, ep in enumerate(modified_entries[:5]):
-        print(f"{i+1}. {ep['entry'].get('title', 'Sin título')}")
+        original_title = ep['entry'].get('title', 'Sin título')
+        clean_title = clean_episode_title(original_title)
+        print(f"{i+1}. {clean_title}")
         print(f"   Fecha: {ep['modified_date'].strftime('%Y-%m-%d')}")
 
 if __name__ == "__main__":
